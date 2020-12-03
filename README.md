@@ -1,1 +1,1 @@
-hello i am a very different string
+HELLO i am a very different string

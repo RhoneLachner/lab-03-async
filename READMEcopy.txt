@@ -1,1 +1,1 @@
-hello i am a random string
+HELLO i am a random string

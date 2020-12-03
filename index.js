@@ -1,4 +1,4 @@
-const { mainModule } = require('process');
+// const { mainModule } = require('process');
 
 const fs = require('fs').promises;
 
@@ -25,7 +25,7 @@ const copy = (src, dst) => {
             fs.writeFile(dst, data)
         })
 }
-
+//TEST THIS FUNCTION USING NODE INDEX.JS
 // copy('./README.md', 'thirdcopytest.txt')
 
 mainModule.exports = copy;
