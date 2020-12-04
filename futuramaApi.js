@@ -8,10 +8,16 @@ fetch('http://futuramaapi.herokuapp.com/api/quotes/1')
 };
 getQuote()
 
-const getCharacter = id => {
-    fetch('https://rickandmortyapi.com/api/character/')
-    .then(res => res.json())
-    .then(json => console.log(json))
-};
-getCharacter()
+const getCharacter = (id) => {
+    return fetch(`https://rickandmortyapi.com/api/character/${id}`)
+    .then(res => {return res.json()})
+    .then(({ name, species, status }) => ({ name: name, species: species, status: status }))
+    .then(result => console.log(result))
+    };
+    getCharacter(1)
+   
 
+
+module.exports = {
+    getCharacter
+  };
