@@ -23,9 +23,13 @@ const copy = (src, dst) => {
     return fs.readFile(src, 'utf-8')
         .then(data => {
             fs.writeFile(dst, data)
+            .catch(err => {
+                console.log(err)
+            })
         })
+        
 }
 //TEST THIS FUNCTION USING NODE INDEX.JS
 // copy('./README.md', 'thirdcopytest.txt')
 
-mainModule.exports = copy;
+module.exports = copy;
